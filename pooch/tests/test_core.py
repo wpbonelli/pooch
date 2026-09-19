@@ -639,7 +639,7 @@ def test_stream_download(fname):
 
 def test_stream_download_parallel_subdir(monkeypatch):
     "Downloading into a new subdirectory in parallel shouldn't fail"
-    threads = 4
+    nthreads = 4
     barrier = threading.Barrier(nthreads, timeout=30)
     makedirs = os.makedirs
 
